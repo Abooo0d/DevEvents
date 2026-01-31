@@ -31,12 +31,12 @@ export default function RootLayout({
         className={`${schibstedGrotesk.variable} ${martianMono.variable} antialiased max-w-full overflow-x-hidden min-w-full`}
       >
       <Navbar />
-     <div className={'absolute z-0'}>
+     <div className={'absolute top-0 z-0 '}>
        <LightRays
          raysOrigin="top-center-offset"
          raysColor="#5dfeca"
          raysSpeed={1}
-         lightSpread={0.8}
+         lightSpread={1}
          rayLength={1.2}
          followMouse={true}
          mouseInfluence={0.05}

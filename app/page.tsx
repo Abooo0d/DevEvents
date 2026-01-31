@@ -1,14 +1,10 @@
 import React from 'react'
 import ExploreButton from "@/Components/Shared/ExploreButton";
-import Navbar from "@/Components/Sections/Navbar";
 import EventCard from "@/Components/Shared/EventCard";
+import  {events} from "@/lib/constents";
+// import * as events from "node:events";
 
 const Page = () => {
-  const events = [
-    {image:'/images/event1.png',title:'Event 1'},
-    {image:'/images/event2.png',title:'Event 2'},
-    {image:'/images/event2.png',title:'Event 2'},
-  ]
   return (
      <section>
        <h1 className={'text-center'}>The Hub For Every Event <br/> You Can`t mess</h1>
@@ -18,7 +14,7 @@ const Page = () => {
          <h3>Featured Events</h3>
          <ul className={'events'}>
            {events.map(((event,index) => (
-               <EventCard key={index} image={event.image} title={event.title}/>
+               <EventCard key={index} {...event} />
            )))}
          </ul>
        </div>
